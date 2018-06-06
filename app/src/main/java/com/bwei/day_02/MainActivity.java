@@ -1,6 +1,5 @@
 package com.bwei.day_02;
 
-import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,14 +17,14 @@ public class MainActivity extends AppCompatActivity {
 
     private List<Integer> list = new ArrayList<>();
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //初始化视图
         initViews();
-
+        //初始化数据
         initDatas();
 
     }
@@ -39,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
         }
         MyViewPager adapter = new MyViewPager(list, MainActivity.this);
         viewPager.setAdapter(adapter);
-
 
     }
 
