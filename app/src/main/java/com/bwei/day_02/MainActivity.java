@@ -31,18 +31,20 @@ public class MainActivity extends AppCompatActivity {
 
     private void initDatas() {
 
+        //循环这添加到集合中
         for (int i = 0; i < img.length; i++) {
-
+            //添加集合中
             list.add(img[i]);
 
         }
+        //设置适配器
         MyViewPager adapter = new MyViewPager(list, MainActivity.this);
         viewPager.setAdapter(adapter);
 
     }
-
+    //初始化视图
     private void initViews() {
-
+        //获取资源ID
         viewPager = findViewById(R.id.viewpager);
 
     }
