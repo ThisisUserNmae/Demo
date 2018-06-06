@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
 
     private List<Integer> list = new ArrayList<>();
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
