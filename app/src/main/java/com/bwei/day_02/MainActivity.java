@@ -45,16 +45,29 @@ public class MainActivity extends AppCompatActivity {
             list.add(img[i]);
 
         }
+
+        for (int i = 0; i < ageList.size(); i++) {
+
+            Bean b = new Bean(age[i]);
+
+            ageList.add(b);
+
+        }
+
         //设置适配器
         MyViewPager adapter = new MyViewPager(list, MainActivity.this);
         viewPager.setAdapter(adapter);
+
+        MyListViewAdapter adapter1 = new MyListViewAdapter(ageList,MainActivity.this);
+
+        mLvAge.setAdapter(adapter1);
 
     }
     //初始化视图
     private void initViews() {
         //获取资源ID
         viewPager = findViewById(R.id.viewpager);
-
+        mLvAge = findViewById(R.id.lv_age);
     }
     /**
      * 我处理了一个bug
