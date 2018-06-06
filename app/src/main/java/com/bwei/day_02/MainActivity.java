@@ -46,4 +46,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewpager);
 
     }
+    /**
+     * 我处理了一个bug
+     */
 }
