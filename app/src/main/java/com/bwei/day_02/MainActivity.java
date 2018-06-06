@@ -49,4 +49,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * 我处理了一个bug
      */
+    /**
+     * 添加了一段注释
+     */
 }
