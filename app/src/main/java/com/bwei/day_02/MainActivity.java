@@ -8,6 +8,8 @@ import android.os.Bundle;
 import java.util.ArrayList;
 import java.util.List;
 
+import adapter.MyViewPager;
+
 public class MainActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
@@ -35,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
             list.add(img[i]);
 
         }
+        MyViewPager adapter = new MyViewPager(list, MainActivity.this);
+        viewPager.setAdapter(adapter);
 
 
     }
