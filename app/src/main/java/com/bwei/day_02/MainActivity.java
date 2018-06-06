@@ -15,7 +15,11 @@ public class MainActivity extends AppCompatActivity {
 
     private int[] img = {R.drawable.ph2,R.drawable.ph3,R.drawable.ph4,R.drawable.ph6};
 
+    private int[] age = {12,23,45,12,34,12,12,12,23,34};
+
     private List<Integer> list = new ArrayList<>();
+
+    private List<Integer> ageList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,13 @@ public class MainActivity extends AppCompatActivity {
             list.add(img[i]);
 
         }
+
+        for (int i = 0; i < age.length; i++) {
+
+            ageList.add(age[i]);
+
+        }
+
         //设置适配器
         MyViewPager adapter = new MyViewPager(list, MainActivity.this);
         viewPager.setAdapter(adapter);
