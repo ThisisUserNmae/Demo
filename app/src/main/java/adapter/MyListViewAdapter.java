@@ -48,7 +48,7 @@ public class MyListViewAdapter extends BaseAdapter {
         }else {
             viewHolder= (ViewHolder) convertView.getTag();
         }
-        viewHolder.age.setText(list.get(position).getAge());
+        viewHolder.age.setText(list.get(position).getAge()+"");
         return convertView;
     }
     class ViewHolder{

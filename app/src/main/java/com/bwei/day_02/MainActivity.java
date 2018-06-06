@@ -23,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private List<Integer> list = new ArrayList<>();
 
     private List<Bean> ageList = new ArrayList<>();
-    private ListView mLvAge;
+    private ListView List_AGE;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,16 +46,26 @@ public class MainActivity extends AppCompatActivity {
             list.add(img[i]);
 
         }
+        for (int i = 0; i < age.length; i++) {
+            Bean bean = new Bean(age[i]);
+            ageList.add(bean);
+
+
+        }
+
         //设置适配器
         MyViewPager adapter = new MyViewPager(list, MainActivity.this);
         viewPager.setAdapter(adapter);
+        MyListViewAdapter viewAdapter = new MyListViewAdapter(ageList, MainActivity.this);
+        List_AGE.setAdapter(viewAdapter);
 
     }
+
     //初始化视图
     private void initViews() {
         //获取资源ID
         viewPager = findViewById(R.id.viewpager);
-
+        List_AGE = findViewById(R.id.lv_age);
     }
     /**
      * 我处理了一个bug
